@@ -8,6 +8,9 @@ class UsersController < ApplicationController
 
   def create
     @user = current_user(params[:name])
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to root_path, notice: 'User created successfully'
     else
       render :new
     end
