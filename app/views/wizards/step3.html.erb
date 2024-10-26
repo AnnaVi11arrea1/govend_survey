@@ -1,0 +1,9 @@
+<%= form_with(model: @survey, url: wizard_path) do |form| %>
+  <div>
+    <%= form.label :question3, "What is missing from your experience in your efforts to manage your events?" %>
+    <%= form.text_area :question3 %>
+  </div>
+  <div>
+    <%= form.submit "Next" %>
+  </div>
+<% end %>

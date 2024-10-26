@@ -1,0 +1,9 @@
+<%= form_with(model: @survey, url: wizard_path) do |form| %>
+  <div>
+    <%= form.label :question8, "Do you currently pay for any event management services? If so, What do you use?" %>
+    <%= form.text_area :question8 %>
+  </div>
+  <div>
+    <%= form.submit "Next" %>
+  </div>
+<% end %>
