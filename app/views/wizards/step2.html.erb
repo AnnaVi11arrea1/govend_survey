@@ -1,0 +1,12 @@
+<%= form_for wizard_path(:step2) do |form| %>
+  <div>
+    <%= form.label :question2, "What, if any, methods have you tried in the past?" %>
+    <%= form.text_area :question2 %>
+  </div>
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>
+
+<%= link_to "Next", "/wizards/step3" %>
+<%= link_to "back", "/wizards/step1" %>

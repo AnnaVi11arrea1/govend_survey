@@ -1,4 +1,4 @@
-<%= form_with(model: @survey, url: wizard_path) do |form| %>
+<%= form_for wizard_path(:step6) do |form| %>
   <div>
     <%= form.label :question6, "Tell me about a time when you were planning or managing an event. What went well? What was difficult?" %>
     <%= form.text_area :question6 %>
@@ -7,3 +7,6 @@
     <%= form.submit "Next" %>
   </div>
 <% end %>
+
+<%= link_to "Next", "/wizards/step7" %>
+<%= link_to "back", "/wizards/step5" %>

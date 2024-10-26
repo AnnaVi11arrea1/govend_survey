@@ -1,4 +1,4 @@
-<%= form_with(model: @survey, url: wizard_path) do |form| %>
+<%= form_for wizard_path(:step11) do |form| %>
   <div>
     <%= form.label :question11, "Do you like to keep a record of your event history? What kind of data is relevant to store?" %>
     <%= form.text_area :question11 %>
@@ -7,3 +7,6 @@
     <%= form.submit "Next" %>
   </div>
 <% end %>
+
+<%= link_to "Next", "/wizards/step12" %>
+<%= link_to "back", "/wizards/step10" %>

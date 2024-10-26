@@ -1,10 +1,14 @@
-<%= form_for wizard_path(@survey) do |form| %>
+<%= form_for wizard_path(:step1) do |form| %>
   <div>
     <%= form.label :question1, "What are you currently using to manage your events? (apps, companies, personal workflow, anything)
 " %>
     <%= form.text_area :question1 %>
   </div>
   <div>
-    <%= form.submit "Next" %>
+    <%= form.submit "Submit" %>
   </div>
+
 <% end %>
+
+<%= link_to "Next", "/wizards/step2" %>
+<%= link_to "back", "/wizards" %>
