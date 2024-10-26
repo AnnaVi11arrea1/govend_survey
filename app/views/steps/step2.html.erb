@@ -1,4 +1,4 @@
-<%= form_with(model: @survey, url: wizard_path) do |form| %>
+<%= form_with(model: @survey, url: next_wizard_path) do |form| %>
   <div>
     <%= form.label :question2, "What, if any, methods have you tried in the past?" %>
     <%= form.text_area :question2 %>

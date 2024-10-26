@@ -1,0 +1,10 @@
+<%= form_with(model: @survey, url: next_wizard_path) do |form| %>
+  <div>
+    <%= form.label :question1, "What are you currently using to manage your events? (apps, companies, personal workflow, anything)
+" %>
+    <%= form.text_area :question1 %>
+  </div>
+  <div>
+    <%= form.submit "Next" %>
+  </div>
+<% end %>
