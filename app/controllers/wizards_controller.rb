@@ -12,8 +12,13 @@ class WizardsController < ApplicationController
   end
 
   def update
-    @survey = current_user.survey
-    @survey.update(survey_params)
+    @survey = Survey.new
+    case @step
+      when step do |assign|
+        assign.assign_attributes(survey_params)
+      end
+    end
+
     render_wizard @survey
   end
 
